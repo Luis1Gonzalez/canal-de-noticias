@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material'
 import { NoticiasProvider } from './context/NoticiasProvider'
 import NewsList from './components/NewsList'
-import Formulario from './components/form'
+import Formulario from './components/Formulario'
 
 function App() {
 
