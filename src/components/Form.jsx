@@ -21,7 +21,7 @@ const COUNTRIES = [
   { value: 'pt', label: 'Portugal' },
 ]
 
-export default function Form() {
+export default function Formulario() {
 
   const { category, handleChangeCategory, handleChangeCountry, country } = useNoticias()
 

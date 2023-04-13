@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material'
 import { NoticiasProvider } from './context/NoticiasProvider'
-import Form from './components/Form'
 import NewsList from './components/NewsList'
+import Formulario from './components/form'
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
         >{/* El primer grid solo avisa que viene la estructura de un grid, asi que hay q poner los dos minimo. */}
           <Grid item xs={12} md={6} lg={4}>
             {/* este item obedece al fullWidth del Form.jsx */}
-            <Form />
+            <Formulario />
           </Grid>
         </Grid>
 
