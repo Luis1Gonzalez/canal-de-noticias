@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from '@mui/material'
 import { NoticiasProvider } from './context/NoticiasProvider'
-import Form from './components/form'
+import Form from './components/Form'
 import NewsList from './components/NewsList'
 
 function App() {
