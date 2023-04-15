@@ -2,28 +2,23 @@ import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import useNoticias from '../hooks/useNoticias'
 
 const CATEGORIAS = [
-  { value: 'general', label: 'General' },
+  { value: 'all', label: 'General' },
   { value: 'business', label: 'Negocios' },
+  { value: 'world', label: 'Mundo' },
+  { value: 'politic', label: 'Política' },
+  { value: 'startup', label: 'Startups' },
   { value: 'entertainment', label: 'Entretenimiento' },
+  { value: 'micellaneous', label: 'Varios' },
+  { value: 'hatke', label: 'Hatke' },
   { value: 'health', label: 'Salud' },
-  { value: 'science', label: 'Ciencia' },
+  { value: 'automobile', label: 'Automoviles' },
   { value: 'sports', label: 'Deportes' },
   { value: 'technology', label: 'Tecnología' },
 ]
 
-const COUNTRIES = [
-  { value: 'us', label: 'Estados Unidos' },
-  { value: 'es', label: 'España' },
-  { value: 've', label: 'Venezuela' },
-  { value: 'mx', label: 'Mexico' },
-  { value: 'co', label: 'Colombia' },
-  { value: 'fr', label: 'Francia' },
-  { value: 'pt', label: 'Portugal' },
-]
-
 export default function Formulario() {
 
-  const { category, handleChangeCategory, handleChangeCountry, country } = useNoticias()
+  const { category, handleChangeCategory } = useNoticias()
 
   return (
     <form>
@@ -40,29 +35,6 @@ export default function Formulario() {
               value={categoria.value}
             >
               {categoria.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-
-      <FormControl
-      fullWidth
-      sx={{
-        marginTop:5
-      }}
-      >
-        <InputLabel>País</InputLabel>
-        <Select
-          label="País"
-          onChange={handleChangeCountry}
-          value={country}
-        >
-          {COUNTRIES.map(countryx => (
-            <MenuItem
-              key={countryx.value}
-              value={countryx.value}
-            >
-              {countryx.label}
             </MenuItem>
           ))}
         </Select>

@@ -3,22 +3,24 @@ import { Card, CardActions, CardContent, CardMedia, Link, Typography, Grid } fro
 
 export default function OneNews({ thisNew }) {
 
-    const { urlToImage, url, title, description, source } = thisNew
+    const { author, content, date, title, url, imageUrl, time  } = thisNew
+    
+    
     return (
         <Grid item md={6} lg={4}>
             <Card>
-                {urlToImage && (
+                {imageUrl && (
                     <CardMedia
                         component="img"
                         alt={`Imagen de la noticia ${title}`}
-                        image={urlToImage}
+                        image={imageUrl}
                         height={200}
                     />
                 )}
 
                 <CardContent>
                     <Typography variant='body' color='error'>
-                        {source.name}
+                        {author}
                     </Typography>
 
                     <Typography variant='h5' component='div'>
@@ -26,7 +28,7 @@ export default function OneNews({ thisNew }) {
                     </Typography>
 
                     <Typography variant='body2' component='div'>
-                        {description}
+                        {content}
                     </Typography>
 
                     <CardActions>

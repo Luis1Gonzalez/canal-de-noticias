@@ -11,11 +11,10 @@ import OneNews from './OneNews'
 
 export default function NewsList() {
 
-    const { news, totalNotice, handleChangePage, page } = useNoticias()
+    const { news } = useNoticias()
     
-const totalPages = Math.ceil(totalNotice / 20)
-// Math.cel redondea siempre hacia arriba.
 
+// Math.cel redondea siempre hacia arriba.
 
     return (
         <>
@@ -33,7 +32,7 @@ const totalPages = Math.ceil(totalNotice / 20)
             spacing={2}
             >
 
-                {news.map(thisNew => (
+                {news?.map(thisNew => (
                     <OneNews
                         key={thisNew.url}
                         thisNew={thisNew}
@@ -43,23 +42,6 @@ const totalPages = Math.ceil(totalNotice / 20)
 
             </Grid>
 
-            <Stack
-            spacing={2}
-            direction={'row'}
-            justifyContent={'center'}
-            alignItems='center'
-            sx={{
-                marginY:5
-            }}
-            >
-      <Pagination
-      count={totalPages}
-      color="primary"
-      onChange={handleChangePage}
-      page={page}
-    //   el primer "page" es un prop de MUI
-      />
-    </Stack>
         </>
     )
 }
