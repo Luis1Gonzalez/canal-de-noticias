@@ -19,16 +19,25 @@ export default function OneNews({ thisNew }) {
                 )}
 
                 <CardContent>
-                    <Typography variant='body' color='error'>
-                        {author}
-                    </Typography>
-
+                    
                     <Typography variant='h5' component='div'>
                         {title}
                     </Typography>
 
                     <Typography variant='body2' component='div'>
                         {content}
+                    </Typography>
+
+                    <Typography variant='body'  color='error' marginTop={2} component='div'>
+                        {author}
+                    </Typography>
+
+                    <Typography variant='body' color='error' component={'div'}>
+                        {date}
+                    </Typography>
+
+                    <Typography variant='body' color='error' component={'div'}>
+                        {time}
                     </Typography>
 
                     <CardActions>
