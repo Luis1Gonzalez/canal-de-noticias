@@ -24,7 +24,7 @@ export default function NewsList() {
                 variant='h3'
                 component={'h2'}
             >
-                Lo mas Destacado
+                Highlights
             </Typography>
 
             <Grid

@@ -2,18 +2,18 @@ import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import useNoticias from '../hooks/useNoticias'
 
 const CATEGORIAS = [
-  { value: 'all', label: 'General' },
-  { value: 'business', label: 'Negocios' },
-  { value: 'world', label: 'Mundo' },
-  { value: 'politic', label: 'Política' },
+  { value: 'all', label: 'All' },
+  { value: 'business', label: 'Business' },
+  { value: 'world', label: 'World' },
+  { value: 'politic', label: 'Politic' },
   { value: 'startup', label: 'Startups' },
-  { value: 'entertainment', label: 'Entretenimiento' },
-  { value: 'micellaneous', label: 'Varios' },
+  { value: 'entertainment', label: 'Entertainment' },
+  { value: 'micellaneous', label: 'Micellaneous' },
   { value: 'hatke', label: 'Hatke' },
-  { value: 'health', label: 'Salud' },
-  { value: 'automobile', label: 'Automoviles' },
-  { value: 'sports', label: 'Deportes' },
-  { value: 'technology', label: 'Tecnología' },
+  { value: 'health', label: 'Health' },
+  { value: 'automobile', label: 'Automobile' },
+  { value: 'sports', label: 'Sports' },
+  { value: 'technology', label: 'Technology' },
 ]
 
 export default function Formulario() {
@@ -23,7 +23,7 @@ export default function Formulario() {
   return (
     <form>
       <FormControl fullWidth>
-        <InputLabel>Categoría</InputLabel>
+        <InputLabel>Category</InputLabel>
         <Select
           label="Categoría"
           onChange={handleChangeCategory}
